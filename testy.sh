@@ -7,7 +7,7 @@ do
 
   ./gen $i > ./tests/test_$i.in
   ./wzor < ./tests/test_$i.in > ./tests/wzor_$i.out
-  ./wzor < ./tests/test_$i.in > ./tests/brut_$i.out
+  ./brut < ./tests/test_$i.in > ./tests/brut_$i.out
    if ! diff -bq ./tests/wzor_$i.out ./tests/brut_$i.out; then
     echo "different"
     break
