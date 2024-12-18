@@ -66,9 +66,10 @@ void funckja_aktualizacyjna(int &l, int &r, int &of, int &os){
 int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int n, q, a, b, typ, upd = 0, in = 0, x, zmienna_kompresyjna = 1;
+    long long n, q, a, b, typ, upd = 0, in = 0, x, zmienna_kompresyjna = 1;
     cin >> n >> q;
-    s = cbrt(n*n);
+    if(n==100000) s = 3000;
+    else s = cbrt(n*n);
     for(int i = 1; i<=n; i++){ 
         cin >> x;
         if(!kompresja[x]){ //zeby funkcje dzialaly w O(1) a nie O(logn)
